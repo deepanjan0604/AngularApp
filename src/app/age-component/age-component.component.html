@@ -1,0 +1,20 @@
+<style>
+.even { color: red; }
+  .odd { color: green; }
+
+</style>
+<p>age-component works!</p>
+
+Enter First Name<input type="text" [(ngModel)]="firstName" required>
+Enter Last Name<input type="text" [(ngModel)]="lastName" required>
+Enter Email<input type="email" [(ngModel)]="email" required>
+Enter Age<input type="number" [(ngModel)]="age" required><br><br>
+<button (click)="ageComponent($event)">Compute</button>
+
+<p *ngIf="display">First Name:{{firstName}} <br> Last Name:{{lastName}} <br>  Email:{{email}} <br>  Age:{{age}} <br> {{birthYear}}</p>
+
+
+<div *ngFor="let item of arr; let odd=odd; let even=even;">
+        <p *ngIf="odd" style="color:green" >Number : {{ item}}</p>
+    <p *ngIf="even" style="color:red" >Number : {{ item}}</p>
+</div>
