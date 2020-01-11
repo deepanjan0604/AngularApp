@@ -1,4 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { ChildDetailsService } from '../child-details.service';
+
 
 @Component({
   selector: 'app-child',
@@ -7,12 +9,13 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ChildComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private iservice:ChildDetailsService) { }
+  arr;
   ngOnInit() {
-  }
+    this.arr=this.iservice.getDetails();
+    }
 
-  arr=[{firstName:"Deep",lastName:"Deepanjan",age:"25"},{firstName:"Sooraj",lastName:"K",age:"25"}]
+  
 
   @Input() receivedFromParent: string;
   @Output() messageToEmit= new EventEmitter<any>();

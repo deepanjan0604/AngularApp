@@ -10,6 +10,8 @@ import { AgeComponentComponent } from './age-component/age-component.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { DatetimeService } from './datetime.service';
+import { ChildDetailsService } from './child-details.service';
+
 
 
 @NgModule({
@@ -26,7 +28,7 @@ import { DatetimeService } from './datetime.service';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [DatetimeService],
+  providers: [DatetimeService,ChildDetailsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
