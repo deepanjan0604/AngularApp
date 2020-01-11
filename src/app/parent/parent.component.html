@@ -21,9 +21,9 @@ Enter Age<input type="number" [(ngModel)]="age" required><br><br>
 
 <table>
     <th>
-        <tr>First name</tr>
-        <tr>Last Name</tr>
-        <tr>Age</tr>
+        <tr appExample>First name</tr>
+        <tr appExample>Last Name</tr>
+        <tr appExample>Age</tr>
     </th>
     <td *ngFor="let item of recieveFromChild;">
         <tr>{{ item.firstName}}</tr>

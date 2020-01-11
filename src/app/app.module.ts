@@ -11,6 +11,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { DatetimeService } from './datetime.service';
 import { ChildDetailsService } from './child-details.service';
+import { ExampleDirective } from './example.directive';
 
 
 
@@ -21,7 +22,8 @@ import { ChildDetailsService } from './child-details.service';
     FooterComponent,
     AgeComponentComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    ExampleDirective
   ],
   imports: [
     BrowserModule,
