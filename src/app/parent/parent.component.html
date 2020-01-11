@@ -31,5 +31,6 @@ Enter Age<input type="number" [(ngModel)]="age" required><br><br>
      <tr>{{ item.age}}</tr>
     </td>
 </table>
+<p>{{date}}</p>
 
 <app-child (messageToEmit)="getMessage($event)"></app-child>

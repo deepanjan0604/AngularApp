@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DatetimeService } from '../datetime.service';
 
 @Component({
   selector: 'app-parent',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParentComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private iservice:DatetimeService) { }
+  date;
+  
   ngOnInit() {
+    this.date=this.iservice.displayTime();
   }
   
   //messageToSend: string='value';
@@ -22,5 +25,7 @@ export class ParentComponent implements OnInit {
   console.log(arr);
 
   }
+
+
 
 }

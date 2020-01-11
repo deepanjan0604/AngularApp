@@ -9,7 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AgeComponentComponent } from './age-component/age-component.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
-
+import { DatetimeService } from './datetime.service';
 
 
 @NgModule({
@@ -26,7 +26,7 @@ import { ChildComponent } from './child/child.component';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [DatetimeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
