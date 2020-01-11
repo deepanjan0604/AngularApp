@@ -7,13 +7,19 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AgeComponentComponent } from './age-component/age-component.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    AgeComponentComponent
+    AgeComponentComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

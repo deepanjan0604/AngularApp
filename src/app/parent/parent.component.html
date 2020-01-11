@@ -1,0 +1,35 @@
+<!-- <p>parent works!</p>
+Enter First Name<input type="text" [(ngModel)]="firstName" required>
+Enter Last Name<input type="text" [(ngModel)]="lastName" required>
+Enter Email<input type="email" [(ngModel)]="email" required>
+Enter Age<input type="number" [(ngModel)]="age" required><br><br>
+<button (click)="employeeFunc($event)">Compute</button>
+
+<app-child [receivedFromParent]="messageToSend"></app-child> -->
+<!-- <div>
+    <div>
+        <div>First Name</div>
+        <div>Last Name</div>
+        <div>Age</div>
+    </div>
+    <div *ngFor="let item for recieveFromChild">
+        <div>{{item.firstName}}</div>
+        <div>{{item.lastName}}</div>
+        <div>{{item.age}}</div>
+    </div>
+</div> -->
+
+<table>
+    <th>
+        <tr>First name</tr>
+        <tr>Last Name</tr>
+        <tr>Age</tr>
+    </th>
+    <td *ngFor="let item of recieveFromChild;">
+        <tr>{{ item.firstName}}</tr>
+     <tr>{{ item.lastName}}</tr>
+     <tr>{{ item.age}}</tr>
+    </td>
+</table>
+
+<app-child (messageToEmit)="getMessage($event)"></app-child>
