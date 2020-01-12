@@ -12,6 +12,7 @@ import { ChildComponent } from './child/child.component';
 import { DatetimeService } from './datetime.service';
 import { ChildDetailsService } from './child-details.service';
 import { ExampleDirective } from './example.directive';
+import { TemplateFormsComponent } from './template-forms/template-forms.component';
 
 
 
@@ -23,7 +24,8 @@ import { ExampleDirective } from './example.directive';
     AgeComponentComponent,
     ParentComponent,
     ChildComponent,
-    ExampleDirective
+    ExampleDirective,
+    TemplateFormsComponent
   ],
   imports: [
     BrowserModule,
