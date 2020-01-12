@@ -1,0 +1,89 @@
+<form [formGroup]="groupingForm1" (ngSubmit)="onSubmit()"  >
+        <label>
+            First Name:
+            <input type="text" formControlName="firstname">
+        </label>
+        <label>
+            Last Name:
+            <input type="text" formControlName="lastname">
+        </label>
+        <label>
+                Email:
+                <input type="email" formControlName="email">
+            </label>
+        <div formGroupName="dob">
+            <h5>DOB</h5>
+            <label>
+                   Year:
+                    <input type="number" formControlName="year">
+                </label>
+                <label>
+                        Month:
+                         <input type="number" formControlName="month">
+                     </label>
+                     <label>
+                            Day:
+                             <input type="number" formControlName="day">
+                         </label>
+                        
+        </div>
+        <button type="submit" [disabled]="!groupingForm1.valid">Click</button>
+    
+    </form>
+
+    <button type="submit" (click)="update()">Update</button>
+
+
+<!-- <label>Name:</label>
+<input type="text" [formControl]="name">
+
+<p>
+
+    Name: {{name.value}}
+
+</p>
+
+<button (click)="update()">Click Here</button> -->
+
+<!-- 
+    <form [formGroup]="groupForm" (ngSubmit)="onSubmit()">
+            <label>First Name:</label>
+            <input type="text" formControlName="firstName">
+            <label>Last Name:</label>
+<input type="text" formControlName="lastName">
+
+<button type="submit" [disabled]="!groupForm.valid">Click</button>
+</form>
+
+
+<form [formGroup]="groupingForm" (ngSubmit)="onSubmit()"  >
+        <label>
+            First Name:
+            <input type="text" formControlName="firstname">
+        </label>
+        <label>
+            Last Name:
+            <input type="text" formControlName="lastname">
+        </label>
+        <div formGroupName="address">
+            <h1>Address</h1>
+            <label>
+                   Street:
+                    <input type="text" formControlName="street">
+                </label>
+                <label>
+                        City:
+                         <input type="text" formControlName="city">
+                     </label>
+                     <label>
+                            State:
+                             <input type="text" formControlName="state">
+                         </label>
+                         <label>
+                                Pin Code:
+                                 <input type="text" formControlName="pincode">
+                             </label>
+        </div>
+        <button type="submit" [disabled]="!groupForm.valid">Click</button>
+    
+    </form> -->
