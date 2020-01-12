@@ -1,16 +1,23 @@
 <form #form="ngForm" (ngSubmit)="loggingForm(form.value)"> 
+    <fieldset ngModelGroup="employee">
 <label>First Name:</label>
 <input type="text" name="firstName" ngModel>
 <br><br>
 <label>Last Name:</label>
 <input type="text" name="lastName" ngModel>
 <br><br>
-<label>City :</label>
-<input type="text" name="city" ngModel>
-<br><br>
 <label>Age:</label>
 <input type="number" name="age" ngModel>
 <br><br>
+</fieldset>
+<fieldset ngModelGroup="address">
+<label>City :</label>
+<input type="text" name="city" ngModel>
+<br><br>
+<label>Country :</label>
+<input type="text" name="country" ngModel>
+<br><br>
+</fieldset>
 <button type="submit">Submit</button>
 
 </form>
