@@ -24,11 +24,13 @@
 
 <form #form="ngForm" (ngSubmit)="loggingForm(form.value)" *ngIf="displayForm"> 
         <fieldset ngModelGroup="user">
-    <label>UserName:</label>
-    <input type="text" name="userName" ngModel>
+    <label>* UserName:</label>
+    <input type="text" name="userName" [(ngModel)]="username" #userName="ngModel" required>
+    <div *ngIf="form.submitted && userName.invalid">User Name is required</div>
+                        <!-- <div *ngIf="userName.errors.required">User Name is required</div> -->
     <br><br>
-    <label>Password:</label>
-    <input type="password" name="password" ngModel>
+    <label>* Password:</label>
+    <input type="password" name="password" ngModel required>
     <br><br>
     </fieldset>
     <button type="submit">Submit</button>

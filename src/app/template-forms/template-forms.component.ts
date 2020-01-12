@@ -22,6 +22,10 @@ export class TemplateFormsComponent implements OnInit {
       this.display=true;
       this.displayForm=false;
     }
+    else{
+      alert("Wrong User Details");
+      
+    }
   }
 
 }
