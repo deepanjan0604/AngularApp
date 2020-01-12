@@ -1,4 +1,4 @@
-<form #form="ngForm" (ngSubmit)="loggingForm(form.value)"> 
+<!-- <form #form="ngForm" (ngSubmit)="loggingForm(form.value)"> 
     <fieldset ngModelGroup="employee">
 <label>First Name:</label>
 <input type="text" name="firstName" ngModel>
@@ -20,4 +20,18 @@
 </fieldset>
 <button type="submit">Submit</button>
 
-</form>
+</form> -->
+
+<form #form="ngForm" (ngSubmit)="loggingForm(form.value)" *ngIf="displayForm"> 
+        <fieldset ngModelGroup="user">
+    <label>UserName:</label>
+    <input type="text" name="userName" ngModel>
+    <br><br>
+    <label>Password:</label>
+    <input type="password" name="password" ngModel>
+    <br><br>
+    </fieldset>
+    <button type="submit">Submit</button>
+    
+    </form>
+    <p *ngIf="display">User Details Validated</p>

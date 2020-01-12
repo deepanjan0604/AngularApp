@@ -12,8 +12,16 @@ export class TemplateFormsComponent implements OnInit {
   ngOnInit() {
   }
 
+  userDetails={userName:"deep",password:"simplilearn"};
+  display=false;
+  displayForm=true;
+
   loggingForm(value:any){
     console.log(value);
+    if(value.user.userName == this.userDetails.userName && value.user.password == this.userDetails.password){
+      this.display=true;
+      this.displayForm=false;
+    }
   }
 
 }
