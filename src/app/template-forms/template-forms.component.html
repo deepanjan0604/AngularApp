@@ -26,14 +26,17 @@
         <fieldset ngModelGroup="user">
     <label>* UserName:</label>
     <input type="text" name="userName" [(ngModel)]="username" #userName="ngModel" required>
-    <div *ngIf="form.submitted && userName.invalid">User Name is required</div>
+    <div *ngIf="userName.touched && userName.invalid"><label class="text-danger">User Name is required</label></div>
+   <!--  <div [hidden]="!form.submitted && !userName.invalid">User Name is required</div> -->
                         <!-- <div *ngIf="userName.errors.required">User Name is required</div> -->
     <br><br>
     <label>* Password:</label>
-    <input type="password" name="password" ngModel required>
+    <input type="password" name="password" [(ngModel)]="password" #Password="ngModel" required>
+    <div *ngIf="Password.touched && Password.invalid" ><label class="text-danger">Password is required</label></div>
+
     <br><br>
     </fieldset>
-    <button type="submit">Submit</button>
+    <button type="submit" [disabled]="!form.form.valid">Submit</button>
     
     </form>
     <p *ngIf="display">User Details Validated</p>
