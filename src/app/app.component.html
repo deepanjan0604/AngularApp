@@ -24,5 +24,12 @@ img [src]="imgurl">-->
 <!-- <ul *ngFor="let data of restData">
     <li>Name: {{data.name}}</li>
 </ul> -->
-<button (click)="displayData(data)">Get Details</button>
-<app-httpsample *ngIf="cond"></app-httpsample>
+<!-- <button (click)="displayData(data);loadDetails();">Get Details</button>
+ -->
+ <button (click)="loadDetails();">Get Details</button>
+
+ <app-httpsample *ngIf="cond"></app-httpsample>
+
+<ul *ngFor="let data of restData1">
+        <li>Name: {{data.name}}</li>
+    </ul>

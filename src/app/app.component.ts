@@ -20,19 +20,20 @@ export class AppComponent {
     alert("Clicked");
   };
 
- 
+ restData1;
 constructor(private http:HttpClient,private iservice:DataServiceService ){
   setTimeout(() => {
     return this.buttonDisplay=false;
   }, 1000);
-  
+ 
 }
 restData;
 cond=false;
 ngOnInit(){
 this.http.get("http://jsonplaceholder.typicode.com/users").
-subscribe((data => this.displayData(data)));
-
+subscribe((data => this.displayData(data))); 
+/* this.http.get("http://jsonplaceholder.typicode.com/users").
+subscribe((data => console.log(data))); */
 }
 
 displayData(data){
@@ -42,6 +43,20 @@ displayData(data){
   this.cond=true;
   debugger;
 }
+
+
+
+counter=0;
+loadDetails(){
+  this.counter=this.counter+1;
+  this.restData1=this.iservice.loadDetails();
+  if(this.restData1.length != this.counter){
+  this.loadDetails();
+  }
+  debugger;
+
+}
+
 
 one=0;
 two=0;

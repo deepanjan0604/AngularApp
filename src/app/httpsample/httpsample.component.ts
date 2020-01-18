@@ -11,8 +11,7 @@ export class HttpsampleComponent implements OnInit {
 
   private restData:any;
   constructor(private iservice:DataServiceService) {
-    debugger; 
-    this.restData=this.iservice.getDetails();
+        this.restData=this.iservice.getDetails();
   }
   display=false;
   displayForm=false;
