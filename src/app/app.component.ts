@@ -32,7 +32,7 @@ cond=false;
 timer;
 index=0;
 ngOnInit(){
-this.http.get("http://jsonplaceholder.typicode.com/users").
+this.http.get("https://jsonplaceholder.typicode.com/users").
 subscribe((data => this.displayData(data))); 
 
 /* this.http.get("http://jsonplaceholder.typicode.com/users").
