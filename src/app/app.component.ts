@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+
 
 @Component({
   selector: 'app-root',
@@ -15,10 +17,22 @@ export class AppComponent {
 
     alert("Clicked");
   };
-constructor(){
+constructor(private http:HttpClient){
   setTimeout(() => {
     return this.buttonDisplay=false;
   }, 1000);
+}
+restData;
+ngOnInit(){
+this.http.get("http://jsonplaceholder.typicode.com/users").
+subscribe((data => this.displayData(data)));
+
+}
+
+displayData(data){
+  console.log(data);
+  this.restData=data;
+
 }
 
 one=0;
