@@ -1,0 +1,27 @@
+<p>Form</p>
+<label>Get Id</label>
+<input type="text" [(ngModel)]="id" >
+<button (click)="getData()">Fetch Data</button>
+<form #form="ngForm" (ngSubmit)="displayData(form.value)" *ngIf="displayForm"> 
+       <fieldset ngModelGroup="data1"> 
+    <label>* Name:</label>
+    <input type="text" name="name" [(ngModel)]="data1.name"  required>
+  
+    <br><br>
+    <label>* UserName:</label>
+    <input type="text" name="username" [(ngModel)]="data1.username"  required>
+
+    <br><br>
+    <label>* Email:</label>
+    <input type="text" name="email"  [(ngModel)]="data1.email"  required>
+
+    <br><br>
+    <label>* Address:</label>
+    <input type="text" name="address" [(ngModel)]="data1.address.street"  required>
+
+    <br><br>
+    </fieldset> 
+    <button type="submit" [disabled]="!form.form.valid">Submit</button>
+    
+    </form>
+    <p *ngIf="display">User Details Validated</p>

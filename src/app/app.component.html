@@ -20,7 +20,9 @@ img [src]="imgurl">-->
 <!-- <app-parent></app-parent> -->
 <!-- <app-template-forms></app-template-forms> -->
 <!-- <app-inputeditor></app-inputeditor> -->
-<p>Hello World!! app component {{title}}</p>
-<ul *ngFor="let data of restData">
+
+<!-- <ul *ngFor="let data of restData">
     <li>Name: {{data.name}}</li>
-</ul>
+</ul> -->
+<button (click)="displayData(data)">Get Details</button>
+<app-httpsample *ngIf="cond"></app-httpsample>

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import { DataServiceService } from './data-service.service';
+
 
 
 @Component({
@@ -17,12 +19,16 @@ export class AppComponent {
 
     alert("Clicked");
   };
-constructor(private http:HttpClient){
+
+ 
+constructor(private http:HttpClient,private iservice:DataServiceService ){
   setTimeout(() => {
     return this.buttonDisplay=false;
   }, 1000);
+  
 }
 restData;
+cond=false;
 ngOnInit(){
 this.http.get("http://jsonplaceholder.typicode.com/users").
 subscribe((data => this.displayData(data)));
@@ -32,7 +38,9 @@ subscribe((data => this.displayData(data)));
 displayData(data){
   console.log(data);
   this.restData=data;
-
+  this.iservice.saveDetails(this.restData);
+  this.cond=true;
+  debugger;
 }
 
 one=0;

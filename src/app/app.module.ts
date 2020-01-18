@@ -18,7 +18,8 @@ import { ChildDetailsService } from './child-details.service';
 import { ExampleDirective } from './example.directive';
 import { TemplateFormsComponent } from './template-forms/template-forms.component';
 import { InputeditorComponent } from './inputeditor/inputeditor.component';
-
+import { DataServiceService } from './data-service.service';
+import { HttpsampleComponent } from './httpsample/httpsample.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { InputeditorComponent } from './inputeditor/inputeditor.component';
     ChildComponent,
     ExampleDirective,
     TemplateFormsComponent,
-    InputeditorComponent
+    InputeditorComponent,
+    HttpsampleComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +41,7 @@ import { InputeditorComponent } from './inputeditor/inputeditor.component';
     ReactiveFormsModule,
     AppRoutingModule,HttpClientModule
   ],
-  providers: [DatetimeService,ChildDetailsService],
+  providers: [DatetimeService,ChildDetailsService,DataServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
