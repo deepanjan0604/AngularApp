@@ -29,31 +29,65 @@ constructor(private http:HttpClient,private iservice:DataServiceService ){
 }
 restData;
 cond=false;
+timer;
+index=0;
 ngOnInit(){
 this.http.get("http://jsonplaceholder.typicode.com/users").
 subscribe((data => this.displayData(data))); 
+
 /* this.http.get("http://jsonplaceholder.typicode.com/users").
-subscribe((data => console.log(data))); */
+subscribe((data => console.log(data))); 
+ */
+
+
 }
 
 displayData(data){
   console.log(data);
-  this.restData=data;
-  this.iservice.saveDetails(this.restData);
+  //this.restData=data;
+  //this.iservice.saveDetails(this.restData);
+  this.restData=[];
   this.cond=true;
-  debugger;
+  this.cond1=true;
+debugger;
+  if( data[0].name != "") { 
+    this.restData[0]=data[0];
+  }
+  this.timer = setInterval(() => {
+    if (this.index < data.length) {
+      var i=this.index;
+       this.restData[i]=data[i];
+       this.index++;
+    } else { 
+       clearInterval(this.timer); // this is optional but good practice
+    }
+  }, 2000);
+  //this.restData1=this.restData;
 }
 
 
-
+cond1=false;
 counter=0;
 loadDetails(){
-  this.counter=this.counter+1;
-  this.restData1=this.iservice.loadDetails();
-  if(this.restData1.length != this.counter){
+ 
+ 
+/* 
+  if( this.restData1[0]) { 
+    this.restData.push(this.restData1[0]);
+  }
+  this.timer = setInterval(() => {
+    if (this.index < this.restData1.length) {
+       this.restData.push(this.restData1[this.index]);
+       this.index++;
+    } else { 
+       clearInterval(this.timer); // this is optional but good practice
+    }
+  }, 2000); */
+//  this.iservice.getDetails();
+ /*  if(this.restData1.length != this.counter){
   this.loadDetails();
   }
-  debugger;
+  debugger; */
 
 }
 

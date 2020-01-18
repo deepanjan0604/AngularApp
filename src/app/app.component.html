@@ -29,7 +29,8 @@ img [src]="imgurl">-->
  <button (click)="loadDetails();">Get Details</button>
 
  <app-httpsample *ngIf="cond"></app-httpsample>
-
-<ul *ngFor="let data of restData1">
-        <li>Name: {{data.name}}</li>
+<div *ngIf="cond1">
+<ul *ngFor="let data1 of restData" >
+        <li>Name: {{data1.name}}</li>
     </ul>
+</div>
