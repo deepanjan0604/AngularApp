@@ -1,0 +1,22 @@
+<p>List of employees</p>
+
+
+<table border="1">
+
+    <tr>
+        <td>Index</td>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Job</td>
+        <td>Salary</td>
+        <td>Action</td>
+    </tr>
+    <tr *ngFor='let data of employees;let i=index;'>
+            <td>{{i+1}}</td>
+            <td>{{data.id}}</td>
+            <td>{{data.ename}}</td>
+            <td>{{data.job}}</td>
+            <td>{{data.salary}}</td>
+            <td><button type='button' (ckick)=''>View</button></td>
+    </tr>
+</table>

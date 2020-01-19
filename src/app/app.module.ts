@@ -28,6 +28,7 @@ import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { EmployeeModule } from './employee/employee.module';
 
 
 @NgModule({
@@ -55,7 +56,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule,HttpClientModule
+    AppRoutingModule,HttpClientModule, EmployeeModule
   ],
   providers: [DatetimeService,ChildDetailsService,DataServiceService],
   bootstrap: [AppComponent]
