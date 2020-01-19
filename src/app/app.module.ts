@@ -20,6 +20,14 @@ import { TemplateFormsComponent } from './template-forms/template-forms.componen
 import { InputeditorComponent } from './inputeditor/inputeditor.component';
 import { DataServiceService } from './data-service.service';
 import { HttpsampleComponent } from './httpsample/httpsample.component';
+import { AboutComponent } from './about/about.component';
+import { IndexComponent } from './index/index.component';
+import { HelpComponent } from './help/help.component';
+import { ContactComponent } from './contact/contact.component';
+import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 @NgModule({
@@ -33,7 +41,15 @@ import { HttpsampleComponent } from './httpsample/httpsample.component';
     ExampleDirective,
     TemplateFormsComponent,
     InputeditorComponent,
-    HttpsampleComponent
+    HttpsampleComponent,
+    AboutComponent,
+    IndexComponent,
+    HelpComponent,
+    ContactComponent,
+    LoginComponent,
+    LogoutComponent,
+    DashboardComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
